@@ -14,8 +14,6 @@ const mostrarPersonas = () => {
         <button class="boton-eliminar" onclick='eliminarPersona(${persona.id})'>Eliminar</button>
       </p>
     `
-
-    console.log(persona);
   }
   document.getElementById('personas').innerHTML = personaHtml;
 
