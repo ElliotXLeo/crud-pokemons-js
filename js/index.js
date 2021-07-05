@@ -5,13 +5,28 @@ const personas = [
 
 const botonAgregar = document.getElementById('botonAgregar');
 
-const mostrarPersona = () => {
+const mostrarPersonas = () => {
   let personaHtml = '';
   for (let persona of personas) {
-    personaHtml += `<p class="persona">${persona.nombre} ${persona.apellido}</p>`
+    personaHtml += `
+      <p class="persona">
+        ${persona.nombre} ${persona.apellido}
+        <button class="boton-eliminar" onclick='eliminarPersona(${persona.id})'>Eliminar</button>
+      </p>
+    `
+
+    console.log(persona);
   }
   document.getElementById('personas').innerHTML = personaHtml;
+
 }
+
+const eliminarPersona = (id) => {
+  let indiceEliminar = personas.findIndex(persona => persona.id === id);
+  personas.splice(indiceEliminar, 1);
+  mostrarPersonas();
+}
+
 
 const agregarPersona = () => {
   const formularioPersona = document.forms['formularioPersona'];
@@ -20,7 +35,7 @@ const agregarPersona = () => {
   if (nombre != '' && apellido != '') {
     const persona = new Persona(nombre, apellido);
     personas.push(persona);
-    mostrarPersona();
+    mostrarPersonas();
   } else {
     alert('Ingrese valores');
   }
@@ -29,3 +44,6 @@ const agregarPersona = () => {
 }
 
 botonAgregar.addEventListener('click', agregarPersona);
+
+window.addEventListener('load', mostrarPersonas);
+
