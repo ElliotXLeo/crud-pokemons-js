@@ -4,6 +4,7 @@ const personas = [
 ];
 
 const botonAgregar = document.getElementById('botonAgregar');
+const botonNuevoListado = document.getElementById('botonNuevoListado');
 
 const mostrarPersonas = () => {
   let personaHtml = '';
@@ -26,7 +27,8 @@ const eliminarPersona = (id) => {
 }
 
 
-const agregarPersona = () => {
+const agregarPersona = (event) => {
+  event.preventDefault();
   const formularioPersona = document.forms['formularioPersona'];
   const nombre = formularioPersona['nombre'].value;
   const apellido = formularioPersona['apellido'].value;
@@ -40,6 +42,21 @@ const agregarPersona = () => {
   formularioPersona['nombre'].value = '';
   formularioPersona['apellido'].value = '';
 }
+
+const nuevoListado = (event) => {
+  event.preventDefault();
+  const respuesta = confirm('¿Desea realizar un nuevo listado?')
+  if (respuesta) {
+    while (personas.length > 0) {
+      personas.pop();
+    }
+  }
+
+  document.forms['formularioPersona'].reset();
+  mostrarPersonas();
+}
+
+botonNuevoListado.addEventListener('click', nuevoListado);
 
 botonAgregar.addEventListener('click', agregarPersona);
 
