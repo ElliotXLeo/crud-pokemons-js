@@ -13,35 +13,35 @@ CRUD de pokemones. Te permite crear, leer, actualizar y eliminar la información
 
 ## 👨‍💻 Tecnologías Usadas 👨‍💻
 <table>
-    <thead>
-      <tr>
-        <th>HTML</th>
-        <th>CSS</th>
-        <th>JavaScript</th>
-        <th>Bootstrap</th>
-        <th>Sweetalert</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <img src="https://i.postimg.cc/rF6WrLjr/html.png" width="100%" />
-        </td>
-        <td>
-          <img src="https://i.postimg.cc/mgSDG9F2/css.png" width="100%" />
-        </td>
-        <td>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="100%" />
-        </td>
-        <td>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" width="100%" />
-        </td>
-        <td>
-          <img src="https://sweetalert2.github.io/images/SweetAlert2.png" width="100%" />
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th>HTML</th>
+      <th>CSS</th>
+      <th>JavaScript</th>
+      <th>Bootstrap</th>
+      <th>Sweetalert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img src="https://i.postimg.cc/rF6WrLjr/html.png" width="100%" />
+      </td>
+      <td>
+        <img src="https://i.postimg.cc/mgSDG9F2/css.png" width="100%" />
+      </td>
+      <td>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="100%" />
+      </td>
+      <td>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" width="100%" />
+      </td>
+      <td>
+        <img src="https://sweetalert2.github.io/images/SweetAlert2.png" width="100%" />
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 🤗 Redes Sociales 🤗
 - 🐭 LinkedIn: https://www.linkedin.com/in/elliotgaramendi/ 🐭
