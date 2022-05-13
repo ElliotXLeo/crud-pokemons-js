@@ -62,11 +62,7 @@ const crudPokemon = () => {
       const tDButtonRead = document.createElement('button');
       tDButtonRead.textContent = '✏';
       tDButtonRead.addEventListener('click', () => readPokemon(_id));
-      tDButtonRead.classList.add('bg-success');
-      tDButtonRead.classList.add('rounded');
-      tDButtonRead.classList.add('border-0');
-      tDButtonRead.classList.add('mx-1');
-      tDButtonRead.classList.add('p-0');
+      tDButtonRead.classList.add(...['bg-success', 'rounded', 'border-0', 'mx-1', 'p-0']);
 
       const tDButtonDelete = document.createElement('button');
       tDButtonDelete.textContent = '🗑';
