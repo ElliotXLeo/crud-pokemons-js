@@ -4,6 +4,7 @@ import { Pokemon } from "./Pokemon.js";
 const crudPokemon = () => {
   const pokemonsData = 'crud-pokemons';
   let pokemons = [];
+
   const formPokemon = document.querySelector('#formPokemon');
 
   const createPokemon = () => {
@@ -197,11 +198,17 @@ const crudPokemon = () => {
 
   if (localStorage.getItem(pokemonsData)) {
     pokemons = JSON.parse(localStorage.getItem(pokemonsData));
-    readPokemons();
+    // readPokemons();
   } else {
+    pokemons = [
+      new Pokemon(generateId(), 'Mew', 'Psiquico', 200, 'Bola Destructiva, 200', 'Burbuja', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png'),
+      new Pokemon(generateId(), 'Pikachu', 'Eléctrico', 70, 'Recargar', 'Rayo, 100', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png'),
+      new Pokemon(generateId(), 'Mewtwo', 'Psiquico', 200, 'Psico Ataque, 150', 'Hiper Rayo, 100', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png')
+    ];
     localStorage.setItem(pokemonsData, JSON.stringify(pokemons));
   }
 
+  readPokemons();
   formPokemon.addEventListener('submit', submitPokemon);
 }
 

@@ -1,6 +1,13 @@
 let timeoutId = 0;
 
 export const generateId = () => {
+  // if (localStorage.getItem(dataBase)) {
+  //   const pokemons = JSON.parse(localStorage.getItem(dataBase));
+  //   const ids = pokemons.length ? pokemons.map(element => element._id) : [0];
+  //   return Math.max(...ids) + 1
+  // } else {
+  //   return 1;
+  // }
   if (localStorage.getItem('crud-pokemons-id')) {
     let id = +localStorage.getItem('crud-pokemons-id');
     localStorage.setItem('crud-pokemons-id', ++id);
